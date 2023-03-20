@@ -7,7 +7,6 @@ public class Player{
     private int hp;
     private int x = 50;
     private int y = 50;
-
     private int speed = 10;
 
     private int point = 0;
@@ -83,6 +82,7 @@ public class Player{
     }
 
     public void display_history_score() {
+        System.out.println("------------------------------------");
         for (int i = 0 ; i < this.score.size() ; i++) {
             System.out.println("Game "+(i+1)+" : "+ this.score.get(i) +"points");
         }

@@ -42,6 +42,14 @@ public class Game implements ActionListener {
                 this.player.set_coordinate(this.player.get_x(), this.player.get_y() + this.player.get_speed());
                 this.player_rect.setBounds(this.player.get_x(), this.player.get_y(), this.player.get_w(), this.player.get_h());
             }
+            else {
+                this.player.display_history_score();
+                this.player.add_score(this.player.get_point());
+                this.player.set_point(0);
+                this.run = false;
+                this.start_btn.setVisible(true);
+                this.player.set_coordinate(50,50);
+            }
         }
     }
 

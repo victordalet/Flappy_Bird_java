@@ -9,13 +9,6 @@ public class Main {
         System.out.println("Welcome "+victor.get_name());
 
 
-        victor.add_score(3);
-        victor.add_score(3);
-        victor.add_score(3);
-        victor.add_score(3);
-        victor.display_history_score();
-
-
         /*--------------------------WINDOW SETTINGS------------------------------*/
         Window window  = new Window();
         JButton start_btn = window.add_button("start",150,150);
@@ -27,9 +20,6 @@ public class Main {
         timer.start();
 
         window.get_window().addKeyListener(new Keyboard(victor,player_rect));
-
-
-
 
     }
 }
