@@ -5,23 +5,25 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        Player victor = new Player("victor",3);
-        System.out.println("Welcome "+victor.get_name());
+        /*--------------------------OBJECT------------------------------*/
 
+        Player player = new Player("victor");
+        System.out.println("Welcome "+player.get_name());
+        Obstacle tube = new Obstacle(3,200);
 
         /*--------------------------WINDOW SETTINGS------------------------------*/
         Window window  = new Window();
         JButton start_btn = window.add_button("start",150,150);
-        JLabel score = window.add_text("Score : "+victor.get_point(),10,10);
-        JPanel player_rect = window.draw_picture("src/player.png",victor.get_x(),victor.get_y(),50,50);
+        JLabel score = window.add_text("Score : "+player.get_point(),10,10);
+        JPanel player_rect = window.draw_picture("src/player.png",player.get_x(),player.get_y(),50,50);
+        JPanel tube_rect = window.draw_picture("src/tube.png",tube.get_x(),tube.get_y()+tube.get_y_pos(),30,170);
 
         /*--------------------------WHILE RUN------------------------------*/
-        Timer timer = new Timer(100, new Game(victor,score,start_btn,player_rect));
+        Timer timer = new Timer(100, new Game(player,score,start_btn,player_rect,tube,tube_rect));
         timer.start();
 
-        window.get_window().addKeyListener(new Keyboard(victor,player_rect));
+        window.get_window().addKeyListener(new Keyboard(player,player_rect));
 
     }
 }
-
 

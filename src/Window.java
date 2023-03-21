@@ -8,10 +8,10 @@ import java.io.IOException;
 public class Window {
 
     /*--------------------------WINDOW SETTINGS------------------------------*/
-    public JFrame window = new JFrame();;
+    public JFrame window = new JFrame();
 
     public Window() {
-        this.window.setSize(400,400);
+        this.window.setSize(400,380);
         this.window.setLayout(null);
         this.window.setVisible(true);
         this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

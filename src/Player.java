@@ -4,7 +4,6 @@ public class Player{
 
     /*--------------------------INIT------------------------------*/
     private final String name;
-    private int hp;
     private int x = 50;
     private int y = 50;
     private int speed = 10;
@@ -18,9 +17,8 @@ public class Player{
 
 
     /*--------------------------CONSTRUCTOR------------------------------*/
-    public Player(String name,int hp) {
+    public Player(String name) {
         this.name = name;
-        this.hp = hp;
     }
 
 
@@ -29,9 +27,6 @@ public class Player{
         return this.name;
     }
 
-    public int get_hp() {
-        return this.hp;
-    }
 
     public int get_x() {
         return this.x;
@@ -61,10 +56,6 @@ public class Player{
     public void set_coordinate(int new_x, int new_y) {
         this.x = new_x;
         this.y = new_y;
-    }
-
-    public void set_hp(int new_nb) {
-        this.hp = new_nb;
     }
 
     public void set_point(int new_point) {
