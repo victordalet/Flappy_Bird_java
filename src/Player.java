@@ -13,12 +13,15 @@ public class Player{
     private int w = 50;
 
     private int h = 50;
+
+    private int jump;
     ArrayList<Integer> score = new ArrayList<>();
 
 
     /*--------------------------CONSTRUCTOR------------------------------*/
-    public Player(String name) {
+    public Player(String name,int jump) {
         this.name = name;
+        this.jump = jump;
     }
 
 
@@ -50,6 +53,10 @@ public class Player{
 
     public int get_speed() {
         return speed;
+    }
+
+    public int get_jump() {
+        return this.jump;
     }
 
     /*--------------------------SETTER------------------------------*/

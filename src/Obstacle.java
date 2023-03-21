@@ -7,15 +7,17 @@ public class Obstacle {
     private int hard;
     private int speed = this.SPEED;
 
+    private int x_pos;
     private int y_pos;
 
 
     /*--------------------------CONSTRUCTOR------------------------------*/
-    public Obstacle(int hard,int y_pos) {
-        this.x  = 300;
+    public Obstacle(int hard,int y_pos,int x_pos) {
+        this.x  = x_pos;
         this.y = (int)(Math.random()*(100 +1));
         this.hard = hard;
         this.y_pos = y_pos;
+        this.x_pos = x_pos;
     }
 
     /*--------------------------GETTER------------------------------*/
@@ -40,6 +42,10 @@ public class Obstacle {
         return this.y_pos;
     }
 
+    public int get_x_pos() {
+        return this.x_pos;
+    }
+
     /*--------------------------SETTERS------------------------------*/
 
     public void set_speed(int new_speed) {
@@ -55,7 +61,7 @@ public class Obstacle {
     public void run() {
         this.x -= speed;
         if (this.x <= 0) {
-            this.x = 350;
+            this.x = 500;
             this.y = (int)(Math.random()*(100 +1));
             this.speed += this.hard;
         }
